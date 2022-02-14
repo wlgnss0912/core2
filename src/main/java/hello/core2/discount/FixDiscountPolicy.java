@@ -1,8 +1,12 @@
 package hello.core2.discount;
 
+import hello.core2.annotation.MainDiscountPolicy;
 import hello.core2.member.Grade;
 import hello.core2.member.Member;
+import org.springframework.stereotype.Component;
 
+@Component
+@MainDiscountPolicy
 public class FixDiscountPolicy implements DiscountPolicy{
 
     final int discountFixAmount = 1000; //1000원 할인
